@@ -225,11 +225,13 @@ end
 ---@return Term
 function Term:run(command)
     self:open()
+    print("fudge")
     print(string.format('%s%s', U.build_cmd(command), A.nvim_replace_termcodes('<CR>', true, true, true)))
     A.nvim_chan_send(
         self.terminal,
         string.format('%s%s', U.build_cmd(command), A.nvim_replace_termcodes('<CR>', true, true, true))
     )
+    print(string.format('%s', U.build_cmd(command))
 
     return self
 end
