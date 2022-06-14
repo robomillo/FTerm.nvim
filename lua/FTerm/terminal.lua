@@ -231,7 +231,7 @@ function Term:run(command)
         self.terminal,
         string.format('%s%s', U.build_cmd(command), A.nvim_replace_termcodes('<CR>', true, true, true))
     )
-    print(string.format('%s', U.build_cmd(command))
+    print(string.format('%s', U.build_cmd(command)))
 
     return self
 end
