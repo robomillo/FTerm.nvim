@@ -3,7 +3,7 @@ local Term = require('FTerm.terminal')
 local M = {}
 
 local t = Term:new()
-
+M.t = t
 ---Creates a custom terminal
 ---@param cfg Config
 ---@return Term
